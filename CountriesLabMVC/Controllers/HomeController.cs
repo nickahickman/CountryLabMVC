@@ -14,11 +14,11 @@ namespace CountriesLabMVC.Controllers
         private readonly ILogger<HomeController> _logger;
         public List<Country> Countries = new List<Country>
         {
-            new Country("USA", new string [] { "Murican" }, "USA! USA! USA! USA!", "USA Freedom #1", new string[] { "#b22234", "#fff", "#3c3b6e" }, "~/img/usaFlag.png"),
-            new Country("Mexico", new string [] { "Spanish" }, "Hola Mundo!", "Home of the best food", new string[] { "#ce1126", "#fff", "#006847" }, "~/img/mexicoFlag.png"),
-            new Country("Japan", new string [] { "Japanese" }, "Kon'nichiwa sekai", "Nintendo's Homeland", new string[] { "#be0029", "#fff" }, "~/img/japanFlag.png"),
-            new Country("Egypt", new string [] { "Arabic" }, "Marhabaan bialealam", "Walk like them", new string[] { "#ce1126", "#fff", "#000" }, "~/img/egyptFlag.png"),
-            new Country("Algeria", new string [] { "Arabic and Berber" }, "Marhabaan bialealam", "Describe Algeria in a sentence", new string[] { "#007a33", "#fff", "#c8102e" }, "~/img/algeriaFlag.png"),
+            new Country("USA", "Murican", "USA! USA! USA! USA!", "USA Freedom #1", new string[] { "Red", "White", "Blue" }, "/img/usaFlag.png"),
+            new Country("Mexico", "Spanish", "Hola Mundo!", "Home of the best food", new string[] { "Green", "White", "Red" }, "/img/mexicoFlag.png"),
+            new Country("Japan", "Japanese", "Kon'nichiwa sekai", "Nintendo's Homeland", new string[] { "Red", "White" }, "/img/japanFlag.png"),
+            new Country("Egypt", "Arabic", "Marhabaan bialealam", "Walk like them", new string[] { "Red", "White", "Black" }, "/img/egyptFlag.png"),
+            new Country("Algeria", "Arabic and Berber", "Marhabaan bialealam", "Describe Algeria in a sentence", new string[] { "Green", "White", "Red" }, "/img/algeriaFlag.png"),
         };
 
         public HomeController(ILogger<HomeController> logger)
@@ -31,13 +31,23 @@ namespace CountriesLabMVC.Controllers
             return View(Countries);
         }
 
-        [HttpPost]
-        public IActionResult DisplayCountry(Country c)
+        public IActionResult Details(string CountryName)
         {
-
+            Country selected = Countries.Find(c => c.Name == CountryName);
+            ViewData["Name"] = selected.Name;
+            ViewData["Language"] = selected.OfficialLanguages;
+            ViewData["Greeting"] = selected.Greeting;
+            ViewData["Colors"] = String.Join(", ", selected.NationalColors);
+            ViewData["Flag"] = selected.FlagURL;
+            ViewData["Description"] = selected.Description;
             return View();
         }
 
+        public IActionResult Description(string CountryDescription)
+        {
+            ViewData["Description"] = CountryDescription;
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();

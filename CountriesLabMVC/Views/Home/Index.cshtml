@@ -4,11 +4,11 @@
 
 @model List<Country>
 
-<form action="DisplayCountry" name="" id="countrySelect">
-    <select for="Country" name="Country" form="countrySelect">
+<form action="/Home/Details" method="post">
+    <select name="CountryName">
         @foreach (Country c in Model)
         {
-            <option value="@c.Name">@c.Name</option>
+            <option value="@c.Name" name="CountryName">@c.Name</option>
         }
     </select><br />
     <input type="submit" value="Get Learnin'" />

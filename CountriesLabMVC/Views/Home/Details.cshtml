@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "Details";
+}
+
+@{
+    if (ViewData["Name"] == null)
+    {
+        <h1>No Country Selected</h1>
+    }
+    else
+    {
+        <p><span class="propName">Name:</span> @ViewData["Name"]</p>
+        <p><span class="propName">Languages:</span> @ViewData["Language"]</p>
+        <p><span class="propName">Greeting:</span> @ViewData["Greeting"]</p>
+        <p><span class="propName">Colors:</span> @ViewData["Colors"]</p>
+        <p class="flag"><span class="propName">Flag:</span></p>
+        <img src="@ViewData["flag"]" />
+        <form action="/Home/Details" method="post">
+            <input hidden name="CountryDescription" value="@ViewData["Description"]" />
+            <input type="submit" name="Submit" value="View Description" />
+        </form>
+    }
+}
+
