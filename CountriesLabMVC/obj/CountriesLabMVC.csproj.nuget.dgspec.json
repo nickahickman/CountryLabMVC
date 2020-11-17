@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HoboPrime\\Desktop\\grandCircus\\CountriesLabMVC\\CountriesLabMVC\\CountriesLabMVC.csproj": {}
+    "C:\\Users\\HoboPrime\\Desktop\\CountryLabMVC\\CountriesLabMVC\\CountriesLabMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HoboPrime\\Desktop\\grandCircus\\CountriesLabMVC\\CountriesLabMVC\\CountriesLabMVC.csproj": {
+    "C:\\Users\\HoboPrime\\Desktop\\CountryLabMVC\\CountriesLabMVC\\CountriesLabMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HoboPrime\\Desktop\\grandCircus\\CountriesLabMVC\\CountriesLabMVC\\CountriesLabMVC.csproj",
+        "projectUniqueName": "C:\\Users\\HoboPrime\\Desktop\\CountryLabMVC\\CountriesLabMVC\\CountriesLabMVC.csproj",
         "projectName": "CountriesLabMVC",
-        "projectPath": "C:\\Users\\HoboPrime\\Desktop\\grandCircus\\CountriesLabMVC\\CountriesLabMVC\\CountriesLabMVC.csproj",
+        "projectPath": "C:\\Users\\HoboPrime\\Desktop\\CountryLabMVC\\CountriesLabMVC\\CountriesLabMVC.csproj",
         "packagesPath": "C:\\Users\\HoboPrime\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HoboPrime\\Desktop\\grandCircus\\CountriesLabMVC\\CountriesLabMVC\\obj\\",
+        "outputPath": "C:\\Users\\HoboPrime\\Desktop\\CountryLabMVC\\CountriesLabMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HoboPrime\\AppData\\Roaming\\NuGet\\NuGet.Config",

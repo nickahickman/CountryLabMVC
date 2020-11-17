@@ -43,9 +43,10 @@ namespace CountriesLabMVC.Controllers
             return View();
         }
 
-        public IActionResult Description(string CountryDescription)
+        [HttpPost]
+        public IActionResult Description(string Description)
         {
-            ViewData["Description"] = CountryDescription;
+            ViewData["Description"] = Description;
             return View();
         }
         public IActionResult Privacy()
